@@ -1,17 +1,14 @@
-var input = document.getElementById('input');
-var result = document.getElementById('result');
-var inputType = document.getElementById('inputType');
-var ResultType = document.getElementById('ResultType');
-var inputTypeValue,ResultTypeValue;
-
-input.addEventListener('keyup',myResult);
-inputType.addEventListener('change', myResult );
-ResultType.addEventListener('change', myResult );
+var metros = document.getElementById('metros');
+var centimetros = document.getElementById('centimetros');
 
 
-inputTypeValue = inputType.value;
-ResultTypeValue= ResultType.value;
-function myResult(){
+metros.addEventListener('keyup', metros2centimetros);
+centimetros.addEventListener('keyup', centimetros2metros);
 
-    result.value = Number(input.value) * 100;
+function metros2centimetros(){
+    centimetros.value = Number(metros.value) * 100;
+}
+
+function centimetros2metros(){
+    metros.value = Number(centimetros.value) / 100;
 }
